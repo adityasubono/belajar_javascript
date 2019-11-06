@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = prompt("Nama Lengkap", "");
+        var umur = prompt("Umur", "");
+        var alamat = prompt("Alamat", "");
+        var tanggal = prompt("Tanggal Lahir", "");
+        document.write("<p> Hello" + name + " Apakabarnya ?");
+        document.write("<p> Umur :" + umur + " Tahun ?");
+        document.write("<p> Alamat :" + alamat);
+        document.write("<p> Tanggal Lahir :" + tanggal);
+
+
+        var ulangi = confirm("Apakah anda mau mengulang?");
+        var counter = 0;
+
+        while (ulangi) {
+            counter++;
+            ulangi = confirm("Apakah anda mau mengulang?");
+        }
+
+        document.write("Perulangan sudah dilakukan sebanyak " + counter + " kali");
+    </script>
+
+
+</body>
+
+</html>

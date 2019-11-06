@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charsetgoyang dombret="utf-8">
+    <title>Tutorial HTML 5 Canvas</title>
+</head>
+
+<body>
+
+    <canvas id="myCanvas" width="640" height="480" style="border:1px solid #000000;">
+    </canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // gambar titik pada koordinat (10,10) dengan ukuran 1x1 px
+        ctx.fillRect(10, 10, 6, 6);
+        ctx.beginPath(); // mulai menggmabar
+        ctx.moveTo(10, 10);
+        ctx.lineTo(50, 50);
+        ctx.stroke();
+
+        ctx.strokeRect(10, 10, 100, 100);
+        ctx.fillRect(120, 10, 100, 100);
+        //hapus titik koordinat
+        ctx.strokeRect(10, 10, 100, 100);
+        ctx.clearRect(5, 5, 20, 20);
+        ctx.fillRect(120, 10, 100, 100);
+
+        ctx.beginPath(); // mulai menggmabar
+        ctx.moveTo(100, 100); // titik awal
+        ctx.lineTo(100, 300); // titik ke-2
+        ctx.lineTo(300, 300); // titik ke-3
+        ctx.closePath(); // titik ke-3 ke titik awal
+
+        // buat garis
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.font = "30px arial";
+        ctx.fillText("Terima kasih sudah berkunjung ke:", 10, 50);
+
+        ctx.font = "64px Arial";
+        ctx.strokeText("PETANIKODE.com", 10, 120);
+    </script>
+
+</body>
+
+</html>

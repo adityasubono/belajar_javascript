@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>1. Membuat Fungsi dengan Cara Biasa</h3>
+    <script>
+        function namaFungsi() {
+            console.log("Hello World!");
+        }
+    </script>
+
+    <h3>2. Membuat Fungsi dengan Ekspresi</h3>
+    <script>
+        var namaFungsi = function () {
+            console.log("Hello World!");
+        }
+    </script>
+
+    <h3>3. Membuat Fungsi dengan Tanda Panah</h3>
+    <script>
+        var namaFungsi = () => {
+            console.log("Hello World!");
+        }
+
+        // atau seperti ini (jika isi fungsi hanya satu baris):
+        var namaFungsi = () => console.log("Hello World!");
+        var namaFungsi = () => {
+            console.log("Hello World!");
+        }
+
+        // atau seperti ini (jika isi fungsi hanya satu baris):
+        var namaFungsi = () => console.log("Hello World!");
+    </script>
+
+    <h3>4. Membuat Fungsi dengan Kostruktor</h3>
+    <script>
+        var namaFungsi = new Function('console.log("Hello World!");');
+    </script>
+
+    <script>
+        // membuat fungsi
+        var sayHello = () => alert("Hello World!");
+    </script>
+    <a href="#" onclick="sayHello()">Klik Aku!</a>
+
+
+    <h3>Contoh Program Javascript dengan Fungsi</h3>
+
+    <fieldset>
+        <legend>Input Form</legend>
+        <input type="text" name="barang" placeholder="input nama barang..." />
+        <input type="button" onclick="addBarang()" value="Tambah" />
+    </fieldset>
+
+    <div>
+        <ul id="list-barang">
+        </ul>
+    </div>
+
+    <script src="js/fungsi.js"></script>
+</body>
+
+</html>

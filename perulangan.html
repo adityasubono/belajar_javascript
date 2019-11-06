@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>1. Perulangan For di Javascript</h3>
+    <script>
+        for (let i = 0; i < 10; i++) {
+            document.write("<p>Perulangan ke-" + i + "</p>")
+        }
+
+        for (counter = 0; counter < 50; counter += 2) {
+            document.write("<p>Perulangan ke-" + counter + "</p>");
+        }
+
+        for (counter = 10; counter > 0; counter--) {
+            document.write("<p>Perulangan ke " + counter + "</p>");
+        }
+    </script>
+
+    <h3>2. Perulangan While di Javascript</h3>
+    <script>
+        var ulangi = confirm("Apakah anda mau mengulang?");
+        var counter = 0;
+
+        while (ulangi) {
+            var jawab = confirm("Apakah anda mau mengulang?")
+            counter++;
+            if (jawab == false) {
+                ulangi = false;
+            }
+        }
+
+        document.write("Perulangan sudah dilakuakn sebanyak " + counter + " kali");
+    </script>
+
+    <h3>3. Perulangan Do/While di Javascript</h3>
+    <script>
+        var ulangi = confirm("Apakah anda mau mengulang?");;
+        var counter = 0;
+
+        do {
+            counter++;
+            ulangi = confirm("Apakah anda mau mengulang?");
+        } while (ulangi)
+
+        document.write("Perulangan sudah dilakuakn sebanyak " + counter + " kali");
+
+        // kita punya array seperti berikut
+        var days = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+
+        // Kemudian kita tampilkan semua hari
+        // dengan menggunakan method foreach
+        days.forEach(function (day) {
+            document.write("<p>" + day + "</p>");
+        });
+    </script>
+
+    <h3>5. Perulangan dengan Method repeat()</h3>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            document.write("Ulangi kalimat ini!");
+        }
+
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                document.write("<p>Perulangan ke " + i + "," + j + "</p>");
+            }
+        }
+
+        var ulangi = confirm("apakah anda ingin mengulang?");
+        var counter = 0;
+
+        while (ulangi) {
+            counter++;
+            var bintang = "*".repeat(counter) + "<br>";
+            document.write(counter + ": " + bintang);
+            ulangi = confirm("apakah anda ingin mengulang?");
+        }
+    </script>
+
+
+</body>
+
+</html>

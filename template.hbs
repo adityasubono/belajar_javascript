@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello Handelbasrs Aditya </title>
+  <script src="js/handlebars-v4.4.3.js"></script>
+</head>
+
+<body>
+  <h1>Hello Kambing....</h1>
+
+  <div id="derekData"></div>
+  <script type="text/javascript">
+    var myInfo = "<p> My name is {{name}}, I live in {{street}}, in {{city}}, state {{state}} </p>";
+    var template = Handelbars.compile(myInfo);
+    var data = template({
+      name: "Aditya Nugroho Subono",
+      street: "JL. Wates KM.12",
+      city: "Yogyakarta",
+      state: "Indonesia"
+
+    });
+    document.getElementById("derekData").innerHTML += data;
+  </script>
+</body>
+
+</html>

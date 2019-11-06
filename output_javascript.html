@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <title>Belajar Javascript</title>
+    <script>
+        alert("Selamat datang di tutorial belajar Javascript");
+
+        function sayHello() {
+            alert("Hello!");
+        }
+    </script>
+
+    <h3>Document Write</h3>
+    <script>
+        document.write("<h1>Hello World!</h1>");
+        document.write("<hr>");
+        document.write("<p>Saya sedang belajar Javascript</p>");
+        document.write("di <b>petanikode.com</b>")
+    </script>
+</head>
+
+
+
+<body>
+    <button onclick="sayHello()">Klik Aku!</button>
+
+    <h1>Tutorial Javascript untuk Pemula</h1>
+    <div id="hasil-output"></div>
+
+    <h3>Menggunakan InnerHTML</h3>
+    <script>
+        // membuat objek elemen
+        var hasil = document.getElementById("hasil-output");
+
+        // menampilkan output ke elemen hasil
+        hasil.innerHTML = "<p>Aku suka Javascript</p>";
+    </script>
+    <a href="index.html">
+        <<< Back</a> </body> </html>

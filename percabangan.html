@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Percabangan if</title>
+</head>
+
+<body>
+    <h3>1. Percabangan if</h3>
+    <script>
+        var totalBelanja = prompt("Total belanja?", 0);
+
+        if (totalBelanja > 100000) {
+            document.write("<h2>Selamat Anda dapat hadiah</h2>");
+        }
+
+        document.write("<p>Terimakasih sudah berbelanja di toko kami</p>");
+    </script>
+    <h3>2. Percabangan if/else</h3>
+    <script>
+        var password = prompt("Password:");
+
+        if (password == "kopi") {
+            document.write("<h2>Selamat datang bos!</h2>");
+        } else {
+            document.write("<p>Password salah, coba lagi!</p>");
+        }
+
+        document.write("<p>Terima kasih sudah menggunakan aplikasi ini!</p>");
+    </script>
+
+    <h3>3. Percabangan if/else/if</h3>
+    <script>
+        var nilai = prompt("Inputkan nilai akhir:");
+        var grade = "";
+
+        if (nilai >= 90) grade = "A"
+        else if (nilai >= 80) grade = "B+"
+        else if (nilai >= 70) grade = "B"
+        else if (nilai >= 60) grade = "C+"
+        else if (nilai >= 50) grade = "C"
+        else if (nilai >= 40) grade = "D"
+        else if (nilai >= 30) grade = "E"
+        else grade = "F";
+
+        document.write(`<p>Grade anda: ${grade}</p>`);
+    </script>
+
+
+    <script>
+        var nilai = prompt("Inputkan nilai akhir:");
+        var grade = "";
+
+        if (nilai >= 90) {
+            grade = "A"
+        } else if (nilai >= 80) {
+            grade = "B+"
+        } else if (nilai >= 70) {
+            grade = "B"
+        } else if (nilai >= 60) {
+            grade = "C+"
+        } else if (nilai >= 50) {
+            grade = "C"
+        } else if (nilai >= 40) {
+            grade = "D"
+        } else if (nilai >= 30) {
+            grade = "E"
+        } else {
+            grade = "F";
+        }
+        document.write(`<p>Grade anda: ${grade}</p>`);
+    </script>
+
+    <h3>4. Percabangan switch/case</h3>
+    <script>
+        var jawab = prompt("Kamu beruntung! Silahakn pilih hadiahmu dengan memasukan angka 1 sampai 5");
+        var hadiah = "";
+
+        switch (jawab) {
+            case "1":
+                hadiah = "Tisu";
+                break;
+            case "2":
+                hadiah = "1 Kotak Kopi";
+                break;
+            case "3":
+                hadiah = "Sticker";
+                break;
+            case "4":
+                hadiah = "Minyak Goreng";
+                break;
+            case "5":
+                hadiah = "Uang Rp 50.000";
+                break;
+            default:
+                document.write("<p>Opps! anda salah pilih</p>");
+        }
+
+        if (hadiah === "") {
+            document.write("<p>Kamu gagal mendapat hadiah</p>");
+        } else {
+            document.write("<h2>Selamat kamu mendapatkan " + hadiah + "</h2>");
+        }
+    </script>
+
+    <h3>5. Percabangan dengan Operator Ternary</h3>
+    <script>
+        var jwb = prompt("Apakah Jakarta ibu kota indonesia?");
+
+        var jawaban = (jwb.toUpperCase() == "IYA") ? "Benar" : "Salah";
+
+        document.write(`Jawaban anda: <b>${jawaban}</b>`);
+    </script>
+
+    <h3>6. Percabangan Bersarang (Nested)</h3>
+
+    <script>
+        var username = prompt("Username:");
+        var password = prompt("Password:");
+
+        if (username == "petanikode") {
+            if (password == "kopi") {
+                document.write("<h2>Selamat datang pak bos!</h2>");
+            } else {
+                document.write("<p>Password salah, coba lagi!</p>");
+            }
+        } else {
+            document.write("<p>Anda tidak terdaftar!</p>");
+        }
+    </script>
+
+    <h3>Bonus: Menggunakan Operator Logika pada Percabangan</h3>
+    <script>
+        var username = prompt("Username:");
+        var password = prompt("Password:");
+
+        if (username == "petanikode" && password == "kopi") {
+            document.write("<h2>Selamat datang pak bos!</h2>");
+        } else {
+            document.write("<p>Password salah, coba lagi!</p>");
+        }
+    </script>
+
+    <a href="index.html">
+        <<< Back</a> </body> </html>
